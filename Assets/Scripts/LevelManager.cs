@@ -5,10 +5,12 @@ using HappyFunTimes;
 public class LevelManager : MonoBehaviour {
 
     public int numLocalPlayers = 0;
+    public GameObject octopus;
 
     private LocalNetPlayer[] m_localPlayers;
 
-    void Start () {
+    void Start ()
+    {
         numLocalPlayers = System.Math.Max(System.Math.Min(numLocalPlayers, 2000), 0);
         m_localPlayers = new LocalNetPlayer[numLocalPlayers];
 
